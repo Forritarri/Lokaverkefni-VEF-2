@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?hc8ypk');
+  src:  url('fonts/icomoon.eot?hc8ypk#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?hc8ypk') format('truetype'),
+    url('fonts/icomoon.woff?hc8ypk') format('woff'),
+    url('fonts/icomoon.svg?hc8ypk#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dreki-icon:before {
+  content: "\e901";
+}
+.icon-DrekiIcon:before {
+  content: "\e900";
+}
+.icon-music:before {
+  content: "\e911";
+}
+.icon-spades:before {
+  content: "\e917";
+}
+.icon-clubs:before {
+  content: "\e918";
+}
+.icon-diamonds:before {
+  content: "\e919";
+}
+.icon-bubble:before {
+  content: "\e96b";
+}
+.icon-bubbles:before {
+  content: "\e96c";
+}
+.icon-bubbles2:before {
+  content: "\e96d";
+}
+.icon-heart:before {
+  content: "\e9da";
+}

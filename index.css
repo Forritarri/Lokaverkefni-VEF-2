@@ -1,0 +1,645 @@
+/* ================================
+   Global & Site Styles
+=============================================== */
+.dreki {
+    position: relative;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --deep-sea-blue: #002F6C;
+    --mid-sea-blue: #005F99;
+    --shore-blue: #4A90E2;
+    --light-wave-blue: #A8D0E6;
+    --glacial-white: #F5F9FF;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    box-sizing: border-box;
+    background-color: var(--glacial-white);
+}
+
+/* Dark Mode Overrides */
+@media (prefers-color-scheme: dark) {
+  .topnav {
+    background-color: #003A8C;
+  }
+  footer {
+    background-color: #001F4C;
+  }
+}
+
+/* Hidden chat toggle (prevents extra button in top left) */
+.chat-toggle {
+    display: none;
+}
+
+/* Header & Navigation */
+#toggle {
+    display: none;
+}
+
+/* Desktop Header */
+.topnav {
+    background-color: var(--deep-sea-blue);
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Desktop Menu */
+.topmenu {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    z-index: 10;
+}
+
+.topmenu a,
+.topmenu label.chat-label {
+    text-decoration: none;
+    color: var(--glacial-white);
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Header Content Container */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Responsive and centered header image */
+.dreki-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    animation: uniqueDrekiAnimation 1.5s ease-out;
+}
+
+/* Responsive Ísland text with diamonds */
+.island {
+    width: 100%;
+    text-align: center;
+    font-size: 10rem;
+    font-family: 'Times New Roman', Times, serif;
+    word-wrap: break-word;
+    animation: uniqueIslandAnimation 1.5s ease-out;
+}
+
+/* Mobile adjustments for island text */
+@media screen and (max-width: 768px) {
+    .island {
+        font-size: 5rem;
+    }
+}
+
+/* Unique Animations for page load */
+@keyframes uniqueDrekiAnimation {
+    0% {
+         transform: translateX(-150%) rotate(-45deg) scale(0.5);
+         opacity: 0;
+    }
+    60% {
+         transform: translateX(20%) rotate(10deg) scale(1.1);
+         opacity: 1;
+    }
+    80% {
+         transform: translateX(-5%) rotate(-5deg) scale(0.95);
+    }
+    100% {
+         transform: translateX(0) rotate(0deg) scale(1);
+    }
+}
+
+@keyframes uniqueIslandAnimation {
+    0% {
+         transform: translateY(150%) scale(0.5) rotate(45deg);
+         opacity: 0;
+    }
+    60% {
+         transform: translateY(-10%) scale(1.1) rotate(-10deg);
+         opacity: 1;
+    }
+    80% {
+         transform: translateY(5%) scale(0.95) rotate(5deg);
+    }
+    100% {
+         transform: translateY(0) scale(1) rotate(0deg);
+    }
+}
+
+/* Slide-in Animations for header elements */
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+/* Mobile Menu Button */
+.menu-icon {
+    font-size: 2rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background-color: var(--mid-sea-blue);
+    padding: 0.5rem 0.7rem 0.7rem 0.5rem;
+    color: var(--glacial-white);
+    cursor: pointer;
+    z-index: 999;
+    width: 2.1rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Mobile Menu */
+.topmenu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    background-color: var(--deep-sea-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: right 0.5s ease-in-out;
+}
+
+#toggle:checked ~ .topmenu {
+    right: 0;
+}
+
+/* Box Layout */
+.box {
+    display: flex;
+    margin: 2rem;
+    padding: 3%;
+    background-color: var(--light-wave-blue);
+    border-radius: 0;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Updated text-section style */
+.text-section {
+    width: 33%;
+    padding: 1rem;
+    background-color: var(--mid-sea-blue);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* New styles so only the text (h1) scales on hover */
+.text-section h1 {
+    transition: transform 0.3s ease;
+}
+
+.text-section:hover h1 {
+    transform: scale(1.1);
+}
+
+/* Image Section and Hover */
+.image-section {
+    width: 67%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-link:hover img {
+    filter: none;
+    transform: scale(1.1);
+}
+
+/* Overlay fyrir 'Lesa meira' */
+.overlay {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0;
+}
+
+.overlay a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--deep-sea-blue);
+    padding: 2rem;
+    color: white;
+    gap: 2rem;
+}
+
+.footer-column {
+    width: 30%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.footer-column h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Responsive */
+@media screen and (min-width: 20rem) {
+    .menu-icon {
+      display: block;
+    }
+}
+
+@media screen and (min-width: 40rem) {
+    .topmenu {
+      flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+    .topmenu {
+      position: relative;
+      width: 100%;
+      flex-direction: row;
+      right: 0;
+    }
+    .menu-icon {
+      display: none;
+    }
+}
+
+@media screen and (min-width: 80rem) {
+    .topmenu {
+      justify-content: center;
+    }
+}
+
+/* Footer Responsive */
+@media screen and (max-width: 20rem) {
+    footer {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-column {
+      width: 100%;
+    }
+}
+
+/* ================================
+   Spjallbox (Chat Modal) Stíll
+=============================================== */
+.chat-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+body:has(#chatToggle:checked) .chat-modal {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.chat-box {
+    background-color: var(--light-wave-blue);
+    padding: 2rem;
+    border-radius: 5px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.chat-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 3rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: var(--deep-sea-blue);
+}
+
+.chat-form {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-form label {
+    margin: 0.5rem 0 0.2rem;
+    font-weight: bold;
+    color: var(--deep-sea-blue);
+}
+
+.chat-form input,
+.chat-form textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--mid-sea-blue);
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.chat-submit {
+    display: inline-block;
+    padding: 0.7rem;
+    background-color: var(--deep-sea-blue);
+    color: var(--glacial-white);
+    border: none;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chat-submit p {
+    color: white;
+}
+
+.chat-submit:hover {
+    background-color: var(--mid-sea-blue);
+}
+
+@media screen and (max-width: 768px) {
+    .chat-box {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      border-radius: 0;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+    .chat-close {
+      font-size: 2rem;
+      padding: 0.5rem;
+    }
+}
+
+/* ================================
+   Slideshow Styles (No JavaScript)
+=============================================== */
+.slideshow-container,
+.text-slideshow-container {
+  overflow: hidden;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.slider,
+.text-slider {
+  display: flex;
+  width: 400%;
+  animation: slide 16s infinite;
+}
+
+.slide,
+.text-slide {
+  flex: 0 0 25%;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+.text-slide p {
+  font-size: 2rem;
+  text-align: center;
+  margin: auto;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  20% { transform: translateX(0%); }
+  25% { transform: translateX(-100%); }
+  45% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  70% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  95% { transform: translateX(-300%); }
+  100% { transform: translateX(0%); }
+}
+
+/* ============================================================
+   Two Side-by-Side Slideshows with Fixed Box & Rounded Corners
+   (Using Custom Animation for a Horizontal Slide Effect)
+   - Boxes are 400px x 300px.
+   - Both image and text slideshows use only 4 slides.
+   - 12s animation cycle.
+   - Both will jump back to the first slide at the end.
+================================================================ */
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-slideshow {
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: 300px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/* For both image and text slideshows, the inner container is 400% wide */
+.image-slideshow .side-slides,
+.text-slideshow .side-slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  animation: customSlide 12s linear infinite;
+}
+
+/* Common style for each slide */
+.side-slide {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-size: 2em;
+}
+
+/* Specific styling for image slides */
+.image-slideshow .side-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Specific styling for text slides */
+.text-slideshow .side-slide {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Custom keyframes for horizontal sliding with 4 slides */
+@keyframes customSlide {
+  0% { transform: translateX(0%); }
+  20.83% { transform: translateX(0%); }       /* Slide 1 holds for ~2.5s */
+  25% { transform: translateX(-100%); }         /* Transition to slide 2 */
+  45.83% { transform: translateX(-100%); }       /* Slide 2 holds for ~2.5s */
+  50% { transform: translateX(-200%); }          /* Transition to slide 3 */
+  70.83% { transform: translateX(-200%); }       /* Slide 3 holds for ~2.5s */
+  75% { transform: translateX(-300%); }          /* Transition to slide 4 */
+  95.83% { transform: translateX(-300%); }       /* Slide 4 holds for ~2.5s */
+  100% { transform: translateX(0%); }            /* Jump back to slide 1 */
+}
+
+/* ================================
+   TAFLA (Form) Styles - Responsive Adjustments
+=============================================== */
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container table {
+    width: 100%;
+}
+
+.form-container table td {
+    padding: 10px;
+}
+
+.form-container input, .form-container select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-container button:hover {
+    background-color: #218838;
+}
+
+/* Responsive adjustments for the form table on small screens */
+@media screen and (max-width: 600px) {
+    .form-container table,
+    .form-container tr,
+    .form-container td {
+        display: block;
+        width: 100%;
+    }
+    .form-container tr {
+        margin-bottom: 15px;
+    }
+    .form-container td:first-child {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .form-container td:last-child {
+        margin-bottom: 10px;
+    }
+}

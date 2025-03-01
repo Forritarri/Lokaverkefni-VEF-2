@@ -1,0 +1,38 @@
+:root {
+    --deep-sea-blue: #002F6C;
+    --mid-sea-blue: #005F99;
+    --shore-blue: #4A90E2;
+    --light-wave-blue: #A8D0E6;
+    --glacial-white: #F5F9FF;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    background-color: var(--glacial-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .thank-you-container {
+    text-align: center;
+    padding: 20px;
+    border: 5px solid var(--shore-blue);
+    background-color: var(--light-wave-blue);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .thank-you-container h1 {
+    font-size: 6rem;
+    color: var(--deep-sea-blue);
+    text-shadow: 2px 2px 4px var(--mid-sea-blue);
+  }
+  

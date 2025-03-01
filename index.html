@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="is">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sveigjanleg vefsíða</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="fonts/style.css">
+  </head>
+  <body>
+    <header>
+      <!-- Hidden checkbox til að stjórna spjallboxi -->
+      <input type="checkbox" id="chatToggle" class="chat-toggle">
+      <!-- Nav -->
+      <nav class="topnav">
+          <input type="checkbox" id="toggle">
+          <label for="toggle" class="menu-icon">&#9776;</label>
+          
+          <section class="topmenu">
+            <a href="almennt.html">Almennt</a>
+            <a href="menning.html">Menning</a>
+            <a href="nattura.html">Náttúra</a>
+            <a href="fani.html">Fáninn</a>
+            <label for="chatToggle" class="chat-label">Senda inn kvörtun</label> <!-- Spjallbox -->
+            <div class="socialbutts">
+                <a href="#">FB</a>
+                <a href="#">X</a>
+                <a href="#">IG</a>
+                <a href="#">YT</a>
+            </div>
+          </section>
+      </nav>
+
+      <div>
+          <img src="dreki-icon.svg" alt="Dreki logo" class="dreki-img">
+      </div>
+
+      <div class="island">
+          <p><span class="icon-diamonds"></span>♦ Ísland ♦<span class="icon-diamonds"></span></p>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <div class="box">
+          <a href="almennt.html" class="text-section"><h1>Almennt</h1></a>
+          <div class="image-section">
+              <a href="almennt.html" class="image-link">
+              <img src="Izlandalmennt.png" alt="Mynd 1">
+              </a>
+              <p class="overlay"><a href="almennt.html">Lesa meira</a></p>
+          </div>
+      </div>
+
+      <div class="box reverse">
+          <a href="menning.html" class="text-section"><h1>Menning</h1></a>
+          <div class="image-section">
+              <a href="menning.html" class="image-link">
+              <img src="Izlenskmenning.png" alt="Mynd 2">
+              </a>
+              <p class="overlay"><a href="menning.html">Lesa meira</a></p>
+          </div>
+      </div>
+
+      <div class="box">
+          <a href="nattura.html" class="text-section"><h1>Náttúra</h1></a>
+          <div class="image-section">
+              <a href="nattura.html" class="image-link">
+              <img src="Izlensknattura.png" alt="Mynd 3">
+              </a>
+              <p class="overlay"><a href="nattura.html">Lesa meira</a></p>
+          </div>
+      </div>
+
+      <div class="box reverse">
+          <a href="fani.html" class="text-section"><h1>Fáninn</h1></a>
+          <div class="image-section">
+              <a href="fani.html" class="image-link">
+              <img src="IzlenskiFaninn.png" alt="Mynd 4">
+              </a>
+              <p class="overlay"><a href="fani.html">Lesa meira</a></p>
+          </div>
+      </div>
+
+      <div class="container">
+          <!-- Image Slideshow -->
+          <div class="side-slideshow image-slideshow">
+            <div class="side-slides">
+              <div class="side-slide"><img src="Izlandalmennt.png" alt="Image 1"></div>
+              <div class="side-slide"><img src="Izlenskmenning.png" alt="Image 2"></div>
+              <div class="side-slide"><img src="Izlensknattura.png" alt="Image 3"></div>
+              <div class="side-slide"><img src="IzlenskiFaninn.png" alt="Image 4"></div>
+              <!-- Duplicate first slide for seamless looping -->
+              <div class="side-slide"><img src="image1.jpg" alt="Image 1 duplicate"></div>
+            </div>
+          </div>
+        
+          <!-- Text Slideshow -->
+          <div class="side-slideshow text-slideshow">
+              <div class="side-slides">
+                  <div class="side-slide">Almennt</div>
+                  <div class="side-slide">Menning</div>
+                  <div class="side-slide">Náttúra</div>
+                  <div class="side-slide">Fáninn</div>
+                  <!-- Duplicate first slide for seamless looping -->
+                  <div class="side-slide">Text Slide 1</div>
+              </div>
+          </div>
+      </div>
+
+      <div class="form-container">
+          <h2>Búa til aðgang</h2>
+          <form action="#" method="post">
+              <table>
+                  <tr>
+                      <td>Fullt nafn:</td>
+                      <td><input type="text" name="fullname" required></td>
+                  </tr>
+                  <tr>
+                      <td>Netfang:</td>
+                      <td><input type="email" name="email" required></td>
+                  </tr>
+                  <tr>
+                      <td>Lykilorð:</td>
+                      <td><input type="password" name="password" required></td>
+                  </tr>
+                  <tr>
+                      <td>Staðfesta lykilorð:</td>
+                      <td><input type="password" name="confirm_password" required></td>
+                  </tr>
+                  <tr>
+                      <td>Land:</td>
+                      <td>
+                          <select name="country" required>
+                              <option value="">Veldu land</option>
+                              <option value="IS">Ísland</option>
+                              <option value="DK">Danmörk</option>
+                              <option value="NO">Noregur</option>
+                              <option value="SE">Svíþjóð</option>
+                          </select>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>Símanúmer:</td>
+                      <td><input type="tel" name="phone"></td>
+                  </tr>
+              </table>
+              <button type="submit">Stofna aðgang</button>
+          </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h3>Dálkur 1</h3>
+            <ul>
+                <li>★ Saga</li>
+                <li>★ Verk</li>
+                <li>★ Viðurkenning</li>
+                <li>★ Samstarf</li>
+                <li>★ Framtíð</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Dálkur 2</h3>
+            <ul>
+                <li>★ Tengiliður</li>
+                <li>★ Spurningar</li>
+                <li>★ Tími</li>
+                <li>★ Staður</li>
+                <li>★ Viðburður</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Dálkur 3</h3>
+            <ul>
+                <li>★ Facebook</li>
+                <li>★ Instagram</li>
+                <li>★ Twitter</li>
+                <li>★ YouTube</li>
+                <li>★ Blog</li>
+            </ul>
+        </div>
+    </footer>
+    
+      
+
+    <!-- Spjallbox (Chat Modal) -->
+    <div class="chat-modal">
+        <div class="chat-box">
+            <!-- X takki til að loka spjallboxi -->
+            <label for="chatToggle" class="chat-close">&times;</label>
+            <form class="chat-form">
+                <label for="chatName">Fullt nafn:</label>
+                <input type="text" id="chatName" name="chatName" placeholder="Sláðu inn fullt nafn" required>
+
+                <label for="chatEmail">Netfang:</label>
+                <input type="email" id="chatEmail" name="chatEmail" placeholder="Sláðu inn netfang" required>
+
+                <label for="chatContent">Efni:</label>
+                <textarea id="chatContent" name="chatContent" placeholder="Skrifaðu efni hér" required></textarea>
+
+                <!-- "Senda inn" takki sem er líka label fyrir chatToggle til að loka spjallboxinu -->
+                <label for="chatToggle" class="chat-submit"><p>Senda inn</p></label>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>
